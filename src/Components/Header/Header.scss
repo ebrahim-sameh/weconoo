@@ -1,0 +1,67 @@
+@import "../../Styles/Variables.scss";
+
+.main__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: $color__white;
+  // color: $color__white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  .nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // .logo {
+    // }
+    .links__list,
+    .nav__list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .links__list {
+        gap: 35px;
+        margin-right: 40px;
+        .main__link {
+          position: relative;
+          font-size: $ft__16;
+          // color: $main__color;
+          font-weight: $ft__W__B;
+          transition: 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: $main__color;
+            transition: 0.3s ease-in-out;
+          }
+          &:hover {
+            color: $main__color;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .language__btn {
+      font-weight: $ft__W__B;
+      font-size: $ft__16;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $main__color;
+      }
+    }
+  }
+}

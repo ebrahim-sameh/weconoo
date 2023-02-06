@@ -1,0 +1,15 @@
+.collection__section {
+  .section__title {
+    text-align: center;
+  }
+  .collection__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    // background-color: red;
+    gap: 4px;
+  }
+  .main__button {
+    margin: 0 auto;
+  }
+}

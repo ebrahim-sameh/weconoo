@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@import "./variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 200vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+* {
+  box-sizing: border-box;
+}
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+// Global Classes
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1250px;
+}
+
+.section__space {
+  margin: 100px 0;
+}
+.section__padding {
+  padding: 60px 0;
+  background-color: #f2f3f8;
+}
+.section__title {
+  font-size: $ft__48;
+  font-weight: $ft__W__M;
+  color: $black__color;
+  position: relative;
+  margin-bottom: 60px;
+  // .under__line {
+  //   position: absolute;
+  //   bottom: -6px;
+  //   left: 0;
+  //   width: 100px;
+  //   height: 4px;
+  //   background-color: $black__color;
+  //   border-radius: 50px;
+  // }
+}
+.main__text {
+  font-size: $ft__16;
+  line-height: 1.7;
+  color: #1d1c1cbf;
+  font-weight: $ft__W__M;
+}
+.sec__button,
+.main__button {
+  padding: 16px 20px;
+  background-color: $Bluish__Grey;
+  color: $color__white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  font-size: $ft__14;
+  font-weight: $ft__W__M;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: $main__color;
+  }
+}
+.sec__button {
+  background-color: $main__color;
+  &:hover {
+    background-color: $Bluish__Grey;
+  }
+}
