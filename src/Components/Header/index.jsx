@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import DropdownMenu from "../DropdownMenu";
 
 import "./Header.scss";
@@ -10,6 +10,11 @@ const Header = () => {
     {
       route: "home",
       label: "Home",
+      link: true,
+    },
+    {
+      route: "services",
+      label: "Services",
       link: true,
     },
     {
@@ -39,8 +44,8 @@ const Header = () => {
       link: true,
     },
     {
-      route: "/gallary",
-      label: "Gallary",
+      route: "/projects",
+      label: "Our Works",
       link: true,
     },
   ];
@@ -48,18 +53,26 @@ const Header = () => {
   return (
     <div className="main__header">
       <nav className="nav container">
-        <Link to="/" className="logo">
+        <NavLink to="/home" className="logo">
           Logo
-        </Link>
+        </NavLink>
         <div className="nav__list">
           <ul className="links__list">
             {links.map((link, i) => {
               if (link.link) {
                 return (
                   <li key={i}>
-                    <Link to={link.route} className="main__link">
+                    <NavLink
+                      to={link.route}
+                      // className="main__link"
+                      // className={({ isActive }) =>
+                      //   isActive ? "active main__link" : "main__link"
+                      // }
+                      className={`main__link ${({ isActive }) =>
+                        isActive ? "active" : ""}`}
+                    >
                       {link.label}
-                    </Link>
+                    </NavLink>
                   </li>
                 );
               } else if (!link.link) {

@@ -46,7 +46,7 @@
             background-color: $main__color;
             transition: 0.3s ease-in-out;
           }
-          &:hover {
+          &.active {
             color: $main__color;
             &::after {
               width: 100%;

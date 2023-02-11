@@ -1,0 +1,16 @@
+.some__works__section {
+  .section__title {
+    text-align: center;
+  }
+  .some__project__container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .sec__button {
+    width: fit-content;
+    margin: 35px auto 0;
+    cursor: pointer;
+    width: 140px;
+  }
+}

@@ -1,0 +1,10 @@
+.services__page {
+  padding-top: 130px;
+  min-height: 100vh;
+  .sevices__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+    margin-bottom: 60px;
+  }
+}

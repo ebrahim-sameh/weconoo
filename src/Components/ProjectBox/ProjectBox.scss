@@ -1,0 +1,68 @@
+@import "../../Styles/Variables.scss";
+
+.main__project__box {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  .collection {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px 20px;
+    background-color: $main__color;
+    color: $color__white;
+    transition: 0.6s ease-in-out;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+    transition: 0.6s ease-in-out;
+  }
+  img {
+    transition: 0.6s ease-in-out;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .project__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+    background-color: #000000ab;
+    color: $Ash__Grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $ft__20;
+    font-weight: $ft__W__M;
+    transition: 0.6s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0px 0px 16px 5px #1515152c;
+    &::after {
+      opacity: 0;
+    }
+    img {
+      transform: scale(1.06312321);
+    }
+    .project__name {
+      transform: translateY(100%);
+    }
+    .collection {
+      transform: translateX(-100%);
+    }
+  }
+}
