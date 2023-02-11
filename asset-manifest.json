@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/new-wecan/static/css/main.64b1e163.css",
+    "main.js": "/new-wecan/static/js/main.6c2da507.js",
+    "static/media/contact.png": "/new-wecan/static/media/contact.26b0a3daef639a682cdc.png",
+    "static/media/footer.png": "/new-wecan/static/media/footer.61f007479517a90a9bc1.png",
+    "static/media/servicebg.png": "/new-wecan/static/media/servicebg.4679100347564b52cfcc.png",
+    "index.html": "/new-wecan/index.html",
+    "main.64b1e163.css.map": "/new-wecan/static/css/main.64b1e163.css.map",
+    "main.6c2da507.js.map": "/new-wecan/static/js/main.6c2da507.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64b1e163.css",
+    "static/js/main.6c2da507.js"
+  ]
+}
