@@ -8,7 +8,7 @@ import "./Header.scss";
 const Header = () => {
   const links = [
     {
-      route: "home",
+      route: "new-wecan",
       label: "Home",
       link: true,
     },
@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <div className="main__header">
       <nav className="nav container">
-        <NavLink to="/home" className="logo">
+        <NavLink to="/new-wecan" className="logo">
           Logo
         </NavLink>
         <div className="nav__list">
