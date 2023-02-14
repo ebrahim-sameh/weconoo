@@ -1,16 +1,36 @@
 {
   "files": {
-    "main.css": "/new-wecan/static/css/main.64b1e163.css",
-    "main.js": "/new-wecan/static/js/main.6c2da507.js",
+    "main.css": "/new-wecan/static/css/main.670d09fb.css",
+    "main.js": "/new-wecan/static/js/main.79ee88ea.js",
+    "static/media/service2.jpg": "/new-wecan/static/media/service2.6569b23f9656a8345c46.jpg",
+    "static/media/service8.jpg": "/new-wecan/static/media/service8.bf76edc739725fa4786a.jpg",
+    "static/media/service7.jpg": "/new-wecan/static/media/service7.17250d063583250bb5df.jpg",
+    "static/media/service5.jpg": "/new-wecan/static/media/service5.3ba5dd2a65a15f0b4d8e.jpg",
+    "static/media/service10.jpg": "/new-wecan/static/media/service10.0cf0c15bd8fa9fa09eaa.jpg",
+    "static/media/service4.jpg": "/new-wecan/static/media/service4.4254cd4defcad4a913de.jpg",
+    "static/media/service11.jpg": "/new-wecan/static/media/service11.e118d928aa90450b3007.jpg",
+    "static/media/service6.jpg": "/new-wecan/static/media/service6.39b663918776c7c86332.jpg",
+    "static/media/service9.jpg": "/new-wecan/static/media/service9.64eae822d6092e47c0ef.jpg",
     "static/media/contact.png": "/new-wecan/static/media/contact.26b0a3daef639a682cdc.png",
     "static/media/footer.png": "/new-wecan/static/media/footer.61f007479517a90a9bc1.png",
     "static/media/servicebg.png": "/new-wecan/static/media/servicebg.4679100347564b52cfcc.png",
+    "static/media/service1.png": "/new-wecan/static/media/service1.ee99ff7b4a6593984327.png",
+    "static/media/Home_Decor.png": "/new-wecan/static/media/Home_Decor.acf1a3bce4d7ebb67e82.png",
+    "static/media/service3.png": "/new-wecan/static/media/service3.248d6fabf2f610d0e216.png",
+    "static/media/Medical_Sector.png": "/new-wecan/static/media/Medical_Sector.0fa52c5cd14c1bd14416.png",
+    "static/media/about__sec.png": "/new-wecan/static/media/about__sec.1ac72d3fb85be86aa523.png",
+    "static/media/mission.png": "/new-wecan/static/media/mission.c7e7d907edb58f9dc6c2.png",
+    "static/media/vision.png": "/new-wecan/static/media/vision.290c93315b05abc9eb93.png",
+    "static/media/about1.png": "/new-wecan/static/media/about1.1b0ee0b291561c7c8df5.png",
+    "static/media/studies.jpeg": "/new-wecan/static/media/studies.c46470711874a8934b2b.jpeg",
+    "static/media/Commercial_Facilities.jpeg": "/new-wecan/static/media/Commercial_Facilities.48444770b1add36d0ed7.jpeg",
+    "static/media/Logo.png": "/new-wecan/static/media/Logo.bac4b0b0cb439fcd8406.png",
     "index.html": "/new-wecan/index.html",
-    "main.64b1e163.css.map": "/new-wecan/static/css/main.64b1e163.css.map",
-    "main.6c2da507.js.map": "/new-wecan/static/js/main.6c2da507.js.map"
+    "main.670d09fb.css.map": "/new-wecan/static/css/main.670d09fb.css.map",
+    "main.79ee88ea.js.map": "/new-wecan/static/js/main.79ee88ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.64b1e163.css",
-    "static/js/main.6c2da507.js"
+    "static/css/main.670d09fb.css",
+    "static/js/main.79ee88ea.js"
   ]
 }
