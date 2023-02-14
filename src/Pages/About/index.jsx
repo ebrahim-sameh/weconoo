@@ -1,49 +1,31 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AboutSection from "../../Components/AboutSection";
+import AboutImage from "../../Components/assets/about1.png";
+import MissionImage from "../../Components/assets/mission.png";
+import VisionImage from "../../Components/assets/vision.png";
 
 import "./About.scss";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const aboutcontent = {
-    heading: "About Us",
-    content: `We Can Company is a family-owned and operated company 
-that has been in operation for over a decade. Raised in Egypt
-, the company operates multiple production lines that produce 
-wooden furniture to their customers' exacting standards. From
-the initial consultation to the final product, an experienced
-team of professional designers committed to quality control 
-ensures that all furniture produced meets their exacting
-standards and is made with the utmost care and attention 
-to detail.`,
-    img: "/assets/about1.png",
+    heading: `${t("Header.About_Us")}`,
+    content: `${t("About_Text")}`,
+    img: AboutImage,
   };
 
   const mission = {
-    heading: "MISSION",
-    content: `We Can is a company that values quality and customer satisfaction 
-above all else. Our team of skilled designers takes pride in creating
-unique, high-quality wooden products.We also offer custom design
-options to ensure that their customers get exactly what they want. 
-In addition to offering a wide range of wooden products, We Can
-is committed to providing competitive prices and excellent customer 
-service. Despite the challenges of inflation and downsizing that many
-businesses face, We Canremains dedicated to providing the best
-possible products and services to their customers.`,
-    img: "/assets/mission.png",
+    heading: `${t("MISSION")}`,
+    content: `${t("Mission_Text")}`,
+    img: MissionImage,
   };
 
   const vision = {
-    heading: "VISION",
-    content: `Our vision is to revolutionize the way people think about 
-and interact with wood products by creating a sustainable
-alternative using advanced synthetic materials and digital 
-fabrication techniques. Leveraging the latest in AI technology, 
-we aim to produce high-quality products that are both 
-environmentally friendly and aesthetically pleasing. Through
-our commitment to innovation and sustainability, we aim 
-to make a positive impact on the world and help shape the
-future of wood manufacturing for generations to come.`,
-    img: "/assets/vision.png",
+    heading: `${t("VISION")}`,
+    content: `${t("Vision_Text")}`,
+    img: VisionImage,
   };
 
   return (

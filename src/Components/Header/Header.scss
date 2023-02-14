@@ -6,19 +6,26 @@
   justify-content: center;
   height: 60px;
   background-color: $color__white;
-  // color: $color__white;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: -1px 7px 14px 0px #00000017;
   .nav {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // .logo {
-    // }
+    height: 100%;
+    .logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img {
+        height: 100%;
+      }
+    }
     .links__list,
     .nav__list {
       display: flex;
@@ -27,10 +34,13 @@
       .links__list {
         gap: 35px;
         margin-right: 40px;
+        &:lang(ar) {
+          margin-right: 0px;
+          margin-left: 40px;
+        }
         .main__link {
           position: relative;
           font-size: $ft__16;
-          // color: $main__color;
           font-weight: $ft__W__B;
           transition: 0.3s ease-in-out;
           display: flex;

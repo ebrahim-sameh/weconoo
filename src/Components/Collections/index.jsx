@@ -1,31 +1,35 @@
 import React, { useEffect } from "react";
 import SingleCollection from "../SingleCollection";
+import { useTranslation } from "react-i18next";
+import { imagesCollections } from "../assets";
 import AOS from "aos";
 
 import "aos/dist/aos.css";
 import "./Collections.scss";
 
 const Collections = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init();
   }, []);
 
   const collections = [
     {
-      label: "collection 1",
-      img: "https://livedemo00.template-help.com/wt_51678/images/product-04-470x303.jpg",
+      label: `${t("collections.Home_Decor")}`,
+      img: imagesCollections.Home__Decor,
     },
     {
-      label: "collection 2",
-      img: "https://livedemo00.template-help.com/wt_51678/images/product-03-470x303.jpg",
+      label: `${t("collections.Medical_Sector")}`,
+      img: imagesCollections.Medical_Sector,
     },
     {
-      label: "collection 3",
-      img: "https://livedemo00.template-help.com/wt_51678/images/product-04-470x303.jpg",
+      label: `${t("collections.Studies")}`,
+      img: imagesCollections.studies,
     },
     {
-      label: "collection 4",
-      img: "https://livedemo00.template-help.com/wt_51678/images/product-03-470x303.jpg",
+      label: `${t("collections.Commercial_Facilities")}`,
+      img: imagesCollections.Commercial_Facilities,
     },
   ];
 
@@ -33,7 +37,7 @@ const Collections = () => {
     <section className="section__space collection__section">
       {/* <div className=""> */}
       <h2 className="section__title" data-aos="fade-up">
-        Our Collection
+        {t("collections.Our_Collection")}
       </h2>
       <div className="collection__content" data-aos="fade-up">
         {collections.map((collection, i) => (
@@ -45,7 +49,7 @@ const Collections = () => {
         ))}
       </div>
       <button className="sec__button" data-aos="fade-up">
-        Show More
+        {t("Show_More")}
       </button>
       {/* </div> */}
     </section>

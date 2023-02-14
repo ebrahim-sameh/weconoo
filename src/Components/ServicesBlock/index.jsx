@@ -1,29 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import "./ServicesBlock.scss";
 
-const ServicesBlock = () => {
+const ServicesBlock = ({ title, img, text }) => {
+  const { t } = useTranslation();
+  const [wrap, setWrap] = useState(true);
+
   return (
     <div className="service__block">
       <div className="service__media">
-        <img
-          src="https://livedemo00.template-help.com/wt_51678/images/product-03-470x303.jpg"
-          alt=""
-        />
+        <img src={img} alt="" />
       </div>
-      <Link to="/" className="service__title">
-        Service Title
-      </Link>
-      <p className="service__desc main__text">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
-        sapiente excepturi voluptatibus atque, ullam sint impedit repellendus
-        ducimus, aut architecto doloribus vel quae accusantium cupiditate
-        quisquam commodi recusandae, quaerat quam!
-      </p>
-      <Link to="/" className="sec__button">
-        Show More
-      </Link>
+      <h3 to="/" className="service__title">
+        {title}
+      </h3>
+      <p className={`service__desc main__text ${wrap ? "wrap" : ""}`}>{text}</p>
+      <button className="sec__button" onClick={() => setWrap((prev) => !prev)}>
+        {wrap ? `${t("Show_More")}` : `${t("Show_Less")}`}
+      </button>
     </div>
   );
 };

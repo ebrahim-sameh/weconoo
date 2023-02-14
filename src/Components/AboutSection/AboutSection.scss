@@ -65,6 +65,10 @@
         opacity: 0.2;
         z-index: -1;
         font-weight: $ft__W__EXB;
+        &:lang(ar) {
+          left: 10px;
+          right: auto;
+        }
       }
     }
   }

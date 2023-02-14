@@ -36,6 +36,8 @@
     font-size: $ft__24;
     font-weight: $ft__W__M;
     transition: 1s ease-in-out;
+    white-space: pre;
+    border-radius: 4px;
   }
   &:hover {
     flex: 1.5;
@@ -43,8 +45,9 @@
       opacity: 0;
     }
     h3 {
-      background-color: #0000007c;
-      padding: 12px 20px;
+      // background-color: #0000007c;
+      padding: 10px 20px;
+      background-color: #009687ab;
     }
   }
 }

@@ -6,7 +6,7 @@
     color: $main__color;
     font-size: $ft__24;
     margin-bottom: 18px;
-    font-weight: $ft__W__EXB;
+    font-weight: $ft__W__S;
     transition: 0.3s ease-in-out;
     position: relative;
     display: block;
@@ -51,6 +51,16 @@
     width: fit-content;
     padding: 10px 20px;
     border-radius: 4px;
+  }
+  .service__desc {
+    line-height: 30px;
+    &.wrap {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+      white-space: pre-wrap;
+    }
   }
   &:hover {
     .service__media {

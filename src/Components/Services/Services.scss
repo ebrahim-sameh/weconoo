@@ -46,10 +46,15 @@
         line-height: 28px;
         overflow: hidden;
         border-radius: 4px;
+        text-transform: capitalize;
         span {
           position: absolute;
           top: 3px;
           left: 10px;
+          &:lang(ar) {
+            left: auto;
+            right: 10px;
+          }
         }
         &::after {
           content: "";
@@ -58,10 +63,25 @@
           left: -40px;
           width: 80px;
           height: 80px;
+          // &:lang(ar) {
+          //   left: auto !important;
+          //   right: -40px !important;
+          // }
           background-color: $main__color;
           border-radius: 50%;
           z-index: -1;
           transition: 1s ease-in-out;
+        }
+        &:lang(ar) {
+          &::after {
+            left: auto;
+            right: -40px;
+          }
+          &:hover {
+            &::after {
+              right: 0;
+            }
+          }
         }
         &:hover {
           &::after {
