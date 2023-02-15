@@ -13,6 +13,9 @@ import service8 from "./service8.jpg";
 import service9 from "./service9.jpg";
 import service10 from "./service10.jpg";
 import service11 from "./service11.jpg";
+import hero1 from "./hero1.jpg";
+import hero2 from "./hero2.jpg";
+import hero3 from "./hero3.jpg";
 
 export const imagesCollections = {
   Home__Decor,
@@ -34,3 +37,5 @@ export const serviceimages = {
   service10,
   service11,
 };
+
+export const heroImages = { hero1, hero2, hero3 };

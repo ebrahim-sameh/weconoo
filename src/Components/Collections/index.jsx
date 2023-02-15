@@ -11,7 +11,7 @@ const Collections = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 1000 });
   }, []);
 
   const collections = [

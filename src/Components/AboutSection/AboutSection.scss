@@ -3,10 +3,14 @@
 .about__page__section {
   background-color: #788f97 !important;
   padding: 40px 0;
+  &:nth-child(4),
   &:nth-child(2) {
     background-color: #fbfafa !important;
     .about__section__content {
       flex-direction: row-reverse;
+      .section__title {
+        white-space: pre;
+      }
       .about__text,
       .section__title {
         color: $Bluish__Grey;

@@ -27,6 +27,33 @@
       flex-direction: column;
       margin-bottom: 20px;
     }
+    .footer__details {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      color: $color__white;
+      > div {
+        flex: 1;
+      }
+      h5 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .text__details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        font-size: 18px;
+        margin-bottom: 14px;
+      }
+      .location__container {
+        height: 200px;
+        // overflow: hidden;
+        display: flex;
+      }
+    }
     .footer__social__list {
       display: flex;
       align-items: center;
