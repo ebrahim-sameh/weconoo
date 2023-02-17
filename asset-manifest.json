@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/new-wecan/static/css/main.b7c6ac44.css",
-    "main.js": "/new-wecan/static/js/main.148ad8be.js",
+    "main.css": "/new-wecan/static/css/main.4c52880d.css",
+    "main.js": "/new-wecan/static/js/main.88150d8d.js",
     "static/media/service2.jpg": "/new-wecan/static/media/service2.6569b23f9656a8345c46.jpg",
     "static/media/service8.jpg": "/new-wecan/static/media/service8.bf76edc739725fa4786a.jpg",
     "static/media/service7.jpg": "/new-wecan/static/media/service7.17250d063583250bb5df.jpg",
@@ -30,13 +30,14 @@
     "static/media/Commercial_Facilities.jpeg": "/new-wecan/static/media/Commercial_Facilities.48444770b1add36d0ed7.jpeg",
     "static/media/Logo.png": "/new-wecan/static/media/Logo.f62035abdcc400b73d15.png",
     "static/media/Junge-Regular.ttf": "/new-wecan/static/media/Junge-Regular.001b325ee115e9171c2a.ttf",
+    "static/media/icon_logo.png": "/new-wecan/static/media/icon_logo.d75abe477d53274cffa2.png",
     "static/media/aoox font.ttf": "/new-wecan/static/media/aoox font.bf642a7923c6b4030e03.ttf",
     "index.html": "/new-wecan/index.html",
-    "main.b7c6ac44.css.map": "/new-wecan/static/css/main.b7c6ac44.css.map",
-    "main.148ad8be.js.map": "/new-wecan/static/js/main.148ad8be.js.map"
+    "main.4c52880d.css.map": "/new-wecan/static/css/main.4c52880d.css.map",
+    "main.88150d8d.js.map": "/new-wecan/static/js/main.88150d8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7c6ac44.css",
-    "static/js/main.148ad8be.js"
+    "static/css/main.4c52880d.css",
+    "static/js/main.88150d8d.js"
   ]
 }
