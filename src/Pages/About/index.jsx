@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AboutSection from "../../Components/AboutSection";
 import AboutImage from "../../Components/assets/about1.png";
 import MissionImage from "../../Components/assets/mission.png";
 import VisionImage from "../../Components/assets/vision.png";
 import ValueImage from "../../Components/assets/value.png";
-// import AOS from "aos";
 
-// import "aos/dist/aos.css";
 import "./About.scss";
 
 const About = () => {
   const { t } = useTranslation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
 
   const aboutcontent = {
     heading: `${t("Header.About_Us")}`,
@@ -45,40 +48,42 @@ const About = () => {
   };
 
   return (
-    <div className="page">
-      <AboutSection
-        heading={aboutcontent.heading}
-        content={aboutcontent.content}
-        img={aboutcontent.img}
-        i={1}
-        text_fade={aboutcontent.text_fade}
-        img_fade={aboutcontent.img_fade}
-      />
-      <AboutSection
-        heading={mission.heading}
-        content={mission.content}
-        img={mission.img}
-        i={2}
-        text_fade={mission.text_fade}
-        img_fade={mission.img_fade}
-      />
-      <AboutSection
-        heading={vision.heading}
-        content={vision.content}
-        img={vision.img}
-        i={3}
-        text_fade={vision.text_fade}
-        img_fade={vision.img_fade}
-      />
-      <AboutSection
-        heading={value.heading}
-        content={value.content}
-        img={value.img}
-        i={4}
-        text_fade={value.text_fade}
-        img_fade={value.img_fade}
-      />
-    </div>
+    <>
+      <div className="page">
+        <AboutSection
+          heading={aboutcontent.heading}
+          content={aboutcontent.content}
+          img={aboutcontent.img}
+          i={1}
+          text_fade={aboutcontent.text_fade}
+          img_fade={aboutcontent.img_fade}
+        />
+        <AboutSection
+          heading={mission.heading}
+          content={mission.content}
+          img={mission.img}
+          i={2}
+          text_fade={mission.text_fade}
+          img_fade={mission.img_fade}
+        />
+        <AboutSection
+          heading={vision.heading}
+          content={vision.content}
+          img={vision.img}
+          i={3}
+          text_fade={vision.text_fade}
+          img_fade={vision.img_fade}
+        />
+        <AboutSection
+          heading={value.heading}
+          content={value.content}
+          img={value.img}
+          i={4}
+          text_fade={value.text_fade}
+          img_fade={value.img_fade}
+        />
+      </div>
+    </>
   );
 };
 

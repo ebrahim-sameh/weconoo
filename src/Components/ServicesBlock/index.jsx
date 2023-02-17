@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import "./ServicesBlock.scss";
 
-const ServicesBlock = ({ title, img, text }) => {
+const ServicesBlock = ({ title, img, text, id, selectedService }) => {
   const { t } = useTranslation();
   const [wrap, setWrap] = useState(true);
+  const ref = useRef();
+
+  useEffect(() => {
+    if (selectedService === id) {
+      window.scrollTo({
+        top: ref?.current?.offsetTop,
+      });
+    }
+    console.log("yes");
+  }, [id, selectedService]);
 
   return (
-    <div className="service__block">
+    <div className="service__block" ref={ref}>
       <div className="service__media">
         <img src={img} alt="" />
       </div>

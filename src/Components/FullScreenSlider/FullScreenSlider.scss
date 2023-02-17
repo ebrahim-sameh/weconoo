@@ -36,6 +36,21 @@
     opacity: 0;
     animation: animate1 $transition 0.1s forwards;
     padding: 60px 10px 20px;
+    display: flex;
+    .project__desc {
+      padding: 20px 16px;
+      background-color: #fff;
+      font-size: 18px;
+      line-height: 30px;
+      border-radius: 10px;
+      margin-right: 10px;
+      max-width: 500px;
+      height: fit-content;
+    }
+    // .fullscreen__slider .slider__content .image-gallery-content,
+    // .fullscreen__slider .slider__content .image-gallery {
+    //   flex: 1 !important;
+    // }
     .image-gallery-content {
       display: flex;
       flex-direction: column;

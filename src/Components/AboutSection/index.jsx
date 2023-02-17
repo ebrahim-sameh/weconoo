@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
+// import React, { useEffect } from "react";
+// import AOS from "aos";
 
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 import "./AboutSection.scss";
 
 const AboutSection = ({ content, heading, img, i, text_fade, img_fade }) => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 1000 });
+  // }, []);
   return (
     <div className="about__page__section">
       <div className="container">

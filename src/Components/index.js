@@ -8,3 +8,4 @@ export { default as ContactUs } from "./ContactUs";
 export { default as Footer } from "./Footer";
 export { default as AboutSection } from "./AboutSection";
 export { default as ServicesBlock } from "./ServicesBlock";
+export { default as ButtonScrollTop } from "./ButtonScrollTop";

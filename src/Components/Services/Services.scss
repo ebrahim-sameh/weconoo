@@ -31,7 +31,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
       margin-bottom: 35px;
-      li {
+      li,
+      .services__item {
         position: relative;
         padding: 20px 10px;
         background-color: #abbbc02f;
@@ -96,6 +97,7 @@
     }
     .sec__button {
       margin: 0 auto;
+      width: fit-content;
     }
   }
 }

@@ -1,27 +1,19 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import AOS from "aos";
+import { Link } from "react-router-dom";
 
-import "aos/dist/aos.css";
 import "./Services.scss";
 
 const Services = () => {
   const { t } = useTranslation();
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+
   const services = [
-    `${t("services.service_1")}`,
-    `${t("services.service_2")}`,
-    `${t("services.service_3")}`,
-    `${t("services.service_4")}`,
-    `${t("services.service_5")}`,
-    `${t("services.service_6")}`,
-    // `${t("services.service_7")}`,
-    // `${t("services.service_8")}`,
-    // `${t("services.service_9")}`,
-    // `${t("services.service_10")}`,
-    // `${t("services.service_11")}`,
+    `${t("services.service1__title")}`,
+    `${t("services.service2__title")}`,
+    `${t("services.service3__title")}`,
+    `${t("services.service4__title")}`,
+    `${t("services.service5__title")}`,
+    `${t("services.service6__title")}`,
   ];
 
   return (
@@ -32,15 +24,22 @@ const Services = () => {
         </h2>
         <ul className="services__content">
           {services.map((service, i) => (
-            <li key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+            <Link
+              to="/services"
+              state={{ id: `service_${i + 1}` }}
+              className="services__item"
+              key={i}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+            >
               <span>{i + 1}</span>
               {service}
-            </li>
+            </Link>
           ))}
         </ul>
-        <button className="sec__button" data-aos="fade-up">
+        <Link to="/services" className="sec__button" data-aos="fade-up">
           {t("All_Services")}
-        </button>
+        </Link>
       </div>
     </section>
   );

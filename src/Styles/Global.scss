@@ -17,7 +17,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #f2f3f8;
+  // background-color: #f2f3f8;
+  // background-color: #fbfbfb;
+  scroll-behavior: smooth;
+  background-color: #f5f5f5;
   overflow-x: hidden;
   &:lang(ar) {
     font-family: "Noto Kufi Arabic", sans-serif;
@@ -79,6 +82,7 @@ button {
   margin-bottom: 60px;
   font-family: myFirstFont;
   font-weight: bold;
+  line-height: 68px;
   &:lang(ar) {
     font-family: "Noto Kufi Arabic", sans-serif;
   }
@@ -113,14 +117,5 @@ button {
   }
 }
 .page {
-  padding-top: 60px;
-}
-.hero__slider {
-  .swiper-pagination {
-    .swiper-pagination-bullet {
-      background-color: $color__white;
-      width: 40px;
-      border-radius: 0;
-    }
-  }
+  padding-top: 80px;
 }

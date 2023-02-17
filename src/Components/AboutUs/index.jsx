@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
+import React from "react";
 import AboutImage from "../assets/about__sec.png";
-
-import "aos/dist/aos.css";
-import "./AboutUs.scss";
 import { useTranslation } from "react-i18next";
+
+import "./AboutUs.scss";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <section className="section__space section__padding about__section">
@@ -25,9 +20,13 @@ const AboutUs = () => {
               {t("About_section.text")}
             </p>
             <div className="about__us__btns">
-              <button className="sec__button" data-aos="fade-right">
+              <Link
+                to="/about-us"
+                className="sec__button"
+                data-aos="fade-right"
+              >
                 {t("Read_More")}
-              </button>
+              </Link>
               <button
                 className="main__button"
                 data-aos="fade-right"

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import {
   AboutUs,
   Collections,
-  ContactUs,
   Hero,
   ProjectBox,
   Services,
@@ -88,11 +88,18 @@ const Home = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   return (
-    <div>
+    <>
       <Hero />
       <Collections />
       <AboutUs />
+      <Services />
       <section className="section__space some__works__section">
         <div className="container">
           <h2 className="section__title">{t("Some_Works")}</h2>
@@ -110,11 +117,11 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="sec__button">{t("All_Works")}</div>
+        <Link to="/projects" className="sec__button">
+          {t("All_Works")}
+        </Link>
       </section>
-      <Services />
-      <ContactUs />
-    </div>
+    </>
   );
 };
 

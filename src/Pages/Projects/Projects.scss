@@ -1,8 +1,9 @@
 @import "../../Styles/Variables.scss";
 
 .our__works__page {
-  min-height: 100vh;
-  padding-top: 130px !important;
+  // min-height: 100vh;
+  overflow: hidden;
+  padding-top: 150px !important;
   .our__works__header {
     display: flex;
     align-items: center;

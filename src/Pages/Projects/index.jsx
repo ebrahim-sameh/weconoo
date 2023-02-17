@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import { ProjectBox } from "../../Components";
 
 import "./Projects.scss";
 
 const Projects = () => {
   const { t } = useTranslation();
+
   const projects = [
     {
       imgs: [
@@ -128,104 +130,118 @@ const Projects = () => {
       category__id: "Studies",
     },
   ];
+
   const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [currentActive, setCurrentActive] = useState("all");
+  const location = useLocation();
+  const [currentActive, setCurrentActive] = useState(
+    location?.state?.categoryID ? location.state.categoryID : "all"
+  );
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
 
   return (
-    <div className="page our__works__page">
-      <div className="container">
-        <div className="our__works__header">
-          <h2 className="section__title">Our Works</h2>
-          <div className="our__works__filter">
-            <button
-              className={`${currentActive === "all" ? "active" : ""}`}
-              onClick={() => {
-                setFilteredProjects(projects);
-                setCurrentActive("all");
-              }}
-            >
-              All
-            </button>
-            <button
-              className={`${currentActive === "Home_Decor" ? "active" : ""}`}
-              onClick={() => {
-                setFilteredProjects(
-                  projects.filter(
-                    (project) => project.category__id === "Home_Decor"
-                  )
-                );
-                setCurrentActive("Home_Decor");
-              }}
-            >
-              {t("collections.Home_Decor")}
-            </button>
-            <button
-              className={`${
-                currentActive === "Medical_Sector" ? "active" : ""
-              }`}
-              onClick={() => {
-                setFilteredProjects(
-                  projects.filter(
-                    (project) => project.category__id === "Medical_Sector"
-                  )
-                );
-                setCurrentActive("Medical_Sector");
-              }}
-            >
-              {t("collections.Medical_Sector")}
-            </button>
-            <button
-              className={`${currentActive === "Studies" ? "active" : ""}`}
-              onClick={() => {
-                setFilteredProjects(
-                  projects.filter(
-                    (project) => project.category__id === "Studies"
-                  )
-                );
-                setCurrentActive("Studies");
-              }}
-            >
-              {t("collections.Studies")}
-            </button>
-            <button
-              className={`${
-                currentActive === "Commercial_Facilities" ? "active" : ""
-              }`}
-              onClick={() => {
-                setFilteredProjects(
-                  projects.filter(
-                    (project) =>
-                      project.category__id === "Commercial_Facilities"
-                  )
-                );
-                setCurrentActive("Commercial_Facilities");
-              }}
-            >
-              {t("collections.Commercial_Facilities")}
-            </button>
+    <>
+      {/* <Header /> */}
+      <div className="page our__works__page">
+        <div className="container">
+          <div className="our__works__header">
+            <h2 className="section__title">Our Works</h2>
+            <div className="our__works__filter">
+              <button
+                className={`${currentActive === "all" ? "active" : ""}`}
+                onClick={() => {
+                  setFilteredProjects(projects);
+                  setCurrentActive("all");
+                }}
+              >
+                All
+              </button>
+              <button
+                className={`${currentActive === "Home_Decor" ? "active" : ""}`}
+                onClick={() => {
+                  setFilteredProjects(
+                    projects.filter(
+                      (project) => project.category__id === "Home_Decor"
+                    )
+                  );
+                  setCurrentActive("Home_Decor");
+                }}
+              >
+                {t("collections.Home_Decor")}
+              </button>
+              <button
+                className={`${
+                  currentActive === "Medical_Sector" ? "active" : ""
+                }`}
+                onClick={() => {
+                  setFilteredProjects(
+                    projects.filter(
+                      (project) => project.category__id === "Medical_Sector"
+                    )
+                  );
+                  setCurrentActive("Medical_Sector");
+                }}
+              >
+                {t("collections.Medical_Sector")}
+              </button>
+              <button
+                className={`${currentActive === "Studies" ? "active" : ""}`}
+                onClick={() => {
+                  setFilteredProjects(
+                    projects.filter(
+                      (project) => project.category__id === "Studies"
+                    )
+                  );
+                  setCurrentActive("Studies");
+                }}
+              >
+                {t("collections.Studies")}
+              </button>
+              <button
+                className={`${
+                  currentActive === "Commercial_Facilities" ? "active" : ""
+                }`}
+                onClick={() => {
+                  setFilteredProjects(
+                    projects.filter(
+                      (project) =>
+                        project.category__id === "Commercial_Facilities"
+                    )
+                  );
+                  setCurrentActive("Commercial_Facilities");
+                }}
+              >
+                {t("collections.Commercial_Facilities")}
+              </button>
+            </div>
+          </div>{" "}
+          <div className="some__project__container">
+            {!filteredProjects.length ? (
+              <p>No Projects</p>
+            ) : (
+              <>
+                {filteredProjects.map((project, i) => (
+                  <ProjectBox
+                    key={i}
+                    name={project.name}
+                    img={project.imgs[0]}
+                    imgs={project.imgs}
+                    collection={project.category}
+                    collection__ID={project.category__id}
+                    index={i}
+                  />
+                ))}
+              </>
+            )}
           </div>
-        </div>{" "}
-        <div className="some__project__container">
-          {!filteredProjects.length ? (
-            <p>No Projects</p>
-          ) : (
-            <>
-              {filteredProjects.map((project, i) => (
-                <ProjectBox
-                  key={i}
-                  name={project.name}
-                  img={project.imgs[0]}
-                  imgs={project.imgs}
-                  collection={project.category}
-                  collection__ID={project.category__id}
-                  index={i}
-                />
-              ))}
-            </>
-          )}
         </div>
       </div>
-    </div>
+      {/* <Footer /> */}
+    </>
   );
 };
 

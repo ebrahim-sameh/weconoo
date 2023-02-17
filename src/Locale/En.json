@@ -27,7 +27,7 @@
   "services": {
     "service_1": "engineering design services",
     "service_2": "Laser cutting and engraving",
-    "service_3": "Paste the tape",
+    "service_3": "Tape Labeling  technology",
     "service_4": "Punching and drilling",
     "service_5": "heat press",
     "service_6": "Two- and three-dimensional sculpture",
@@ -44,7 +44,7 @@
     "service6__title": "Laser cutting and engraving",
     "service7__title": "Prototyping and prototyping support",
     "service8__title": "Design and engineering support",
-    "service9__title": "Tape glueing technology",
+    "service9__title": "Tape Labeling  technology",
     "service10__title": "Punching and drilling",
     "service11__title": "two- and three-dimensional sculpture",
     "service1__text": "You could benefit from our digital fabrication and laser-cutting capabilities. Our services allow businesses to produce large quantities through batch production and mass customization. You'll be able to access the quality, precision, and efficiency that come with this technology, making your production process both easier and quicker. With our help, you can streamline your production and save on overall costs.",
@@ -66,5 +66,7 @@
   "Vision_Text": "Our vision is to revolutionize the way people think about and interact with wood products by creating a sustainable alternative using advanced synthetic materials and digital fabrication techniques.\" Leveraging the latest in AI technology, we aim to produce high-quality products that are both environmentally friendly and aesthetically pleasing. \"Through our commitment to innovation and sustainability, we aim to make a positive impact on the world and help shape the future of wood manufacturing for generations to come.",
   "Contact_Us": "Contact Us",
   "Value_Proposition": "Value Proposition",
-  "Value_text": "At We Can Company, we strive to provide the highest level of quality to our customers. To ensure that our products meet our high standards, we use a variety of finishing methods to preserve the wood and highlight its natural beauty. To create truly unique items, our artisans use technical methods such as designing and programming. There are several benefits to purchasing from our company. Most importantly, we use high-quality wood sourced from trusted and certified sources. The wood is then precisely cut to ensure that the furniture is durable and long-lasting. To make the furniture more appealing, we also use finishing techniques such as vacuum technology and laser cutting. Customers can also personalize their furniture to suit their preferences. At WeCan Company, we are extremely conscientious about quality control. We have a comprehensive set of quality control standards in place to ensure that all of our products are made with the utmost care, safety, and durability. Our production lines are constantly monitored and inspected to ensure that only the best materials are used. In addition, for precise measurements and perfect finishes, we use innovative technologies such as machine technologies and development."
+  "Value_text": "At We Can Company, we strive to provide the highest level of quality to our customers. To ensure that our products meet our high standards, we use a variety of finishing methods to preserve the wood and highlight its natural beauty. To create truly unique items, our artisans use technical methods such as designing and programming. There are several benefits to purchasing from our company. Most importantly, we use high-quality wood sourced from trusted and certified sources. The wood is then precisely cut to ensure that the furniture is durable and long-lasting. To make the furniture more appealing, we also use finishing techniques such as vacuum technology and laser cutting. Customers can also personalize their furniture to suit their preferences. At WeCan Company, we are extremely conscientious about quality control. We have a comprehensive set of quality control standards in place to ensure that all of our products are made with the utmost care, safety, and durability. Our production lines are constantly monitored and inspected to ensure that only the best materials are used. In addition, for precise measurements and perfect finishes, we use innovative technologies such as machine technologies and development.",
+  "our__location": "Al Mahkama, Monshaat Al Awqaf, Kafr El Dawwar, El Beheira Governorate 22621",
+  "Whatssapp": "WhatsApp Us"
 }

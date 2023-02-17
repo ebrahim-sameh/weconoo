@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable array-callback-return */
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import DropdownMenu from "../DropdownMenu";
 import { useTranslation } from "react-i18next";
 import AppContext from "../../store/app-context";
@@ -8,18 +9,20 @@ import Logo from "../assets/Logo.png";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ className }) => {
   const ctx = useContext(AppContext);
   const { t } = useTranslation();
-
+  const [showHeader, setShowHeader] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const location = useLocation();
   const links = [
     {
-      route: "new-wecan",
+      route: "/new-wecan",
       label: `${t("Header.Home")}`,
       link: true,
     },
     {
-      route: "services",
+      route: "/services",
       label: `${t("Header.Services")}`,
       link: true,
     },
@@ -54,10 +57,40 @@ const Header = () => {
       label: `${t("Header.Our_Works")}`,
       link: true,
     },
+    {
+      route: "/contact-us",
+      label: `${t("Contact_Us")}`,
+      link: true,
+    },
   ];
 
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (document.body.getBoundingClientRect().top < 0) {
+        setScrollPosition(document.body.getBoundingClientRect().top);
+        setShowHeader(
+          document.body.getBoundingClientRect().top > scrollPosition
+        );
+      } else {
+        setShowHeader(null);
+      }
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [scrollPosition]);
+
   return (
-    <div className="main__header">
+    <div
+      className={`main__header ${`${
+        location.pathname === "/new-wecan" ? "home__hero" : ""
+      }`} ${
+        showHeader === null ? "" : showHeader ? "header__show" : "header__hide"
+      }`}
+    >
       <nav className="nav container">
         <NavLink to="/new-wecan" className="logo">
           <img src={Logo} alt="" />
@@ -86,7 +119,9 @@ const Header = () => {
               }
             })}
           </ul>
-          {/* <button className="language__btn">Ar</button> */}
+          <a className="whats__app" target="_blank" href="#">
+            {t("Whatssapp")}
+          </a>
           <button className="language__btn" onClick={() => ctx.toggleLang()}>
             {ctx.lang === "ar" ? "الانجليزية" : "Arabic"}
           </button>

@@ -16,18 +16,10 @@ const ContactUs = () => {
               Whatsapp <BsWhatsapp />
             </h2>
             <div>
-              {/* <img
-                src="https://t3.ftcdn.net/jpg/03/57/77/60/240_F_357776090_tbTe4jO2uJcQQroBl9gcZ2qDwvLj6Jdp.jpg"
-                alt=""
-              /> */}
               <img
                 src="https://t3.ftcdn.net/jpg/01/63/90/90/240_F_163909099_yWrKeZtloyzdQTg2y8XEy5XFj4dKSLvG.jpg"
                 alt=""
               />
-              {/* <img
-                src="https://img.freepik.com/free-psd/phone-screen-mockup_53876-76354.jpg?size=626&ext=jpg"
-                alt=""
-              /> */}
               <button>
                 Chat Whatsapp With Us <BsWhatsapp className="icon" />
               </button>

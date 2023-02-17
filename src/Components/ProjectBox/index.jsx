@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { FaImages } from "react-icons/fa";
 import FullScreenSlider from "../FullScreenSlider";
-import AOS from "aos";
 
-import "aos/dist/aos.css";
 import "./ProjectBox.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,9 +12,6 @@ import "swiper/css/navigation";
 const ProjectBox = ({ name, collection, imgs }) => {
   const [openSlider, setOprnSlider] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <>

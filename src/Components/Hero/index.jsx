@@ -1,26 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Autoplay, Pagination } from "swiper";
+import { EffectCreative, Autoplay, Pagination, Navigation } from "swiper";
 import { heroImages } from "../assets";
+import LogoIcon from "../assets/icon_logo.png";
 import {
-  AiFillTwitterCircle,
-  AiFillInstagram,
-  AiFillDribbbleCircle,
-} from "react-icons/ai";
-import { BsFacebook } from "react-icons/bs";
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaLinkedin,
+  FaWhatsappSquare,
+} from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
-
+import "swiper/css/navigation";
 import "./Hero.scss";
-import AppContext from "../../store/app-context";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { t } = useTranslation();
-  const ctx = useContext(AppContext);
   const content = [
     {
       text: "We build your dreams",
@@ -36,8 +37,6 @@ const Hero = () => {
     },
   ];
 
-  const dir = ctx.lang === "ar" ? "rtl" : "ltr";
-
   return (
     <section className="hero__section">
       <Swiper
@@ -52,6 +51,7 @@ const Hero = () => {
           delay: 5000,
           disableOnInteraction: false,
         }}
+        navigation={true}
         effect={"creative"}
         creativeEffect={{
           prev: {
@@ -63,7 +63,7 @@ const Hero = () => {
             translate: ["100%", 0, 0],
           },
         }}
-        modules={[Pagination, EffectCreative, Autoplay]}
+        modules={[Pagination, EffectCreative, Autoplay, Navigation]}
         className="hero__slider"
       >
         {content.map((content, i) => (
@@ -71,6 +71,21 @@ const Hero = () => {
             {({ isActive }) => (
               <div className="div">
                 <img src={content.img} alt="" />
+                {i === 0 && (
+                  <div
+                    className={`hero__wecan__title ${isActive ? "active" : ""}`}
+                  >
+                    <div className="hero__wecan__icon">
+                      <img src={LogoIcon} alt="" />
+                    </div>
+                    <div className="wecan__text">
+                      <h1 className="wecan__title">WE CAN</h1>
+                      <div className="wooden__text">
+                        <p>Wooden Products</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <h1
                   className={`Heading ${isActive ? "active" : ""} ${
                     i === 0 ? "one" : i === 1 ? "two" : "three"
@@ -82,27 +97,54 @@ const Hero = () => {
                   <div className={`hero__social ${isActive ? "active" : ""}`}>
                     <ul>
                       <li>
-                        <a href="" target="_blank">
-                          <BsFacebook />
+                        <a
+                          href="https://www.facebook.com/profile.php?id=100086677671717"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaFacebookSquare />
                         </a>
                       </li>
                       <li>
-                        <a href="" target="_blank">
-                          <AiFillTwitterCircle />
+                        <a
+                          href="https://www.instagram.com/wecan.eg/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <RiInstagramFill />
                         </a>
                       </li>
                       <li>
-                        <a href="" target="_blank">
-                          <AiFillInstagram />
+                        <a
+                          href="https://twitter.com/We_Can_Wood"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaTwitterSquare />
                         </a>
                       </li>
                       <li>
-                        <a href="" target="_blank">
-                          <AiFillDribbbleCircle />
+                        <a
+                          href="https://www.linkedin.com/company/wecaneg/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaLinkedin />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/company/wecaneg/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaWhatsappSquare />
                         </a>
                       </li>
                     </ul>
-                    <button className="sec__button">{t("Contact_Us")}</button>
+                    <Link to="/contact-us" className="sec__button">
+                      {t("Contact_Us")}
+                    </Link>
                   </div>
                 )}
               </div>
