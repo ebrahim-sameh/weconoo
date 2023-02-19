@@ -181,6 +181,11 @@
         width: fit-content;
         padding: 12px 20px;
         background-color: $main__color;
+        &:lang(ar) {
+          left: auto;
+          right: 0;
+          transform: translate(100%, 80%);
+        }
         &.active {
           transition-delay: 0.8s;
           animation: none;
@@ -224,9 +229,16 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+      &:lang(ar) {
+        left: auto;
+        right: 50px;
+      }
       .sec__button {
         opacity: 0;
         transform: translateX(-180%);
+        &:lang(ar) {
+          transform: translateX(180%);
+        }
       }
       &.active {
         transition-delay: 1.6s;

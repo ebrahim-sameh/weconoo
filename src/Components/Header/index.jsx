@@ -6,6 +6,7 @@ import DropdownMenu from "../DropdownMenu";
 import { useTranslation } from "react-i18next";
 import AppContext from "../../store/app-context";
 import Logo from "../assets/Logo.png";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 import "./Header.scss";
 
@@ -86,7 +87,10 @@ const Header = ({ className }) => {
   return (
     <div
       className={`main__header ${`${
-        location.pathname === "/new-wecan" ? "home__hero" : ""
+        location.pathname === "/new-wecan" ||
+        location.pathname === "/new-wecan/"
+          ? "home__hero"
+          : ""
       }`} ${
         showHeader === null ? "" : showHeader ? "header__show" : "header__hide"
       }`}
@@ -120,10 +124,11 @@ const Header = ({ className }) => {
             })}
           </ul>
           <a className="whats__app" target="_blank" href="#">
-            {t("Whatssapp")}
+            {/* {t("Whatssapp")} */}
+            <AiOutlineWhatsApp />
           </a>
           <button className="language__btn" onClick={() => ctx.toggleLang()}>
-            {ctx.lang === "ar" ? "الانجليزية" : "Arabic"}
+            {ctx.lang === "ar" ? "En" : "Ar"}
           </button>
         </div>
       </nav>

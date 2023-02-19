@@ -55,7 +55,7 @@
       justify-content: flex-end;
       .links__list {
         gap: 35px;
-        margin-right: 40px;
+        margin-right: 24px;
         &:lang(ar) {
           margin-right: 0px;
           margin-left: 40px;
@@ -97,19 +97,16 @@
       }
     }
     .whats__app {
-      display: block;
       margin-right: 10px;
-      font-weight: $ft__W__B;
-      font-size: $ft__14;
-      border: 1px solid;
-      border-radius: 10px;
-      padding: 10px 14px;
-      text-transform: capitalize !important;
       transition: 0.3s ease-in-out;
-      backdrop-filter: blur(10px);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 14px;
       &:lang(ar) {
         margin-right: 0px;
-        margin-left: 10px;
+        margin-left: 14px;
       }
       &:hover {
         color: $gold__color;

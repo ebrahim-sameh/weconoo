@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SingleCollection from "../SingleCollection";
 import { useTranslation } from "react-i18next";
 import { imagesCollections } from "../assets";
@@ -11,24 +11,24 @@ const Collections = () => {
 
   const collections = [
     {
-      label: `${t("collections.Home_Decor")}`,
-      img: imagesCollections.Home__Decor,
-      category__id: "Home_Decor",
-    },
-    {
       label: `${t("collections.Medical_Sector")}`,
       img: imagesCollections.Medical_Sector,
       category__id: "Medical_Sector",
     },
     {
-      label: `${t("collections.Studies")}`,
-      img: imagesCollections.studies,
-      category__id: "Studies",
+      label: `${t("collections.Home_Decor")}`,
+      img: imagesCollections.Home__Decor,
+      category__id: "Home_Decor",
     },
     {
       label: `${t("collections.Commercial_Facilities")}`,
       img: imagesCollections.Commercial_Facilities,
       category__id: "Commercial_Facilities",
+    },
+    {
+      label: `${t("collections.Studies")}`,
+      img: imagesCollections.studies,
+      category__id: "Studies",
     },
   ];
 

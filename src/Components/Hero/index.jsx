@@ -24,15 +24,15 @@ const Hero = () => {
   const { t } = useTranslation();
   const content = [
     {
-      text: "We build your dreams",
+      text: `${t("Hero__title_1")}`,
       img: heroImages.hero1,
     },
     {
-      text: "Join Our Social Media Community and Stay Informed.",
+      text: `${t("Hero__title_2")}`,
       img: heroImages.hero2,
     },
     {
-      text: `We’re Here to Help: Fill out Our Website Contact Form and We’ll Be in Contact Soon`,
+      text: `${t("Hero__title_3")}`,
       img: heroImages.hero3,
     },
   ];
@@ -47,10 +47,10 @@ const Hero = () => {
         }}
         dir={"ltr"}
         speed={1200}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
         navigation={true}
         effect={"creative"}
         creativeEffect={{

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import "./ServicesBlock.scss";
 
@@ -15,7 +14,6 @@ const ServicesBlock = ({ title, img, text, id, selectedService }) => {
         top: ref?.current?.offsetTop,
       });
     }
-    console.log("yes");
   }, [id, selectedService]);
 
   return (

@@ -6,7 +6,7 @@
   .contact__us__content {
     h2.section__title {
       text-align: center;
-      margin-bottom: 14vpx;
+      margin-bottom: 14px;
     }
     .contact__us__text {
       font-size: $ft__16;
@@ -24,7 +24,7 @@
       justify-content: center;
       width: 800px;
       max-width: 100%;
-      margin: 0 auto 40px;
+      margin: 0 auto 80px;
       form {
         display: flex;
         flex-direction: column;
@@ -32,9 +32,22 @@
         flex: 1;
         .main__button {
           background-color: $main__color;
+          font-size: 18px;
           &:focus,
           &:hover {
             background-color: $gold__color;
+          }
+          &.loading {
+            pointer-events: none;
+            cursor: not-allowed;
+          }
+          .spinner {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            border-right-color: transparent;
+            animation: spinning 1s linear infinite backwards;
           }
         }
         > div {
@@ -50,6 +63,10 @@
             display: flex;
             transform: translateY(-50%);
             color: $color__white;
+            &:lang(ar) {
+              left: auto;
+              right: 0;
+            }
           }
         }
         textarea,
@@ -62,15 +79,31 @@
           border: 2px solid $main__color;
           border-left-width: 58px;
           width: 100%;
+          &[type="number"] {
+            padding-left: 83px;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            &:lang(ar) {
+              padding-left: 0px;
+              padding-right: 83px;
+            }
+          }
           &:focus {
             border-color: $gold__color;
+          }
+          &:lang(ar) {
+            border-left-width: 2px;
+            border-right-width: 58px;
           }
         }
         textarea {
           padding-top: 20px;
           min-height: 150px;
           border-radius: 10px;
-          border: 2px solid $main__color;
+          border: 2px solid $main__color !important;
           width: auto;
         }
       }
@@ -95,5 +128,26 @@
         border-color: $gold__color;
       }
     }
+  }
+  .countries__code {
+    position: absolute;
+    top: 2px;
+    height: calc(100% - 4px);
+    left: 60px;
+    width: 70px;
+    border: none;
+    outline: none;
+    border-right: 1px solid #ccc;
+    &:lang(ar) {
+      left: auto;
+      right: 60px;
+      border-right: 0;
+      border-left: 1px solid #ccc;
+    }
+  }
+}
+@keyframes spinning {
+  to {
+    transform: rotate(360deg);
   }
 }
