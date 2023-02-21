@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="left">
             <h4 className="footer__title">
               <BsTelephoneFill />
-              Phones
+              {t("Phones")}
             </h4>
             <a href="tel:01013503160" className="footer__item">
               01013503160
@@ -32,60 +32,10 @@ const Footer = () => {
               0452148925
             </a>
           </div>
-          <div className="center">
-            <img src={Logo} alt="" />
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100086677671717"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebookSquare />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/wecan.eg/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <RiInstagramFill />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/We_Can_Wood"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitterSquare />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/wecaneg/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/wecaneg/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaWhatsappSquare />
-                </a>
-              </li>
-            </ul>
-          </div>
           <div className="rigth">
             <h4 className="footer__title">
               <MdLocationOn />
-              Location
+              {t("Location")}
             </h4>
             <p className="footer__item">{t("our__location")}</p>
             <a
@@ -97,6 +47,56 @@ const Footer = () => {
               Google Map
             </a>
           </div>
+        </div>
+        <div className="center">
+          <img src={Logo} alt="" />
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100086677671717"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookSquare />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/wecan.eg/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <RiInstagramFill />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/We_Can_Wood"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTwitterSquare />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/wecaneg/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/wecaneg/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaWhatsappSquare />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

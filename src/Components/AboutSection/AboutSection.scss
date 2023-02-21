@@ -53,22 +53,20 @@
     }
     .about__text {
       color: $color__white;
-      font-size: $ft__18;
-      // font-weight: $ft__W__M;
-      line-height: 32px;
+      // font-size: $ft__18;
+      // line-height: 32px;
       padding: 12px 14px;
-      // background-color: #4749492f;
-      // backdrop-filter: blur(10px);
       backdrop-filter: brightness(0.5) blur(4px);
       position: relative;
       span {
         position: absolute;
-        bottom: 50px;
+        bottom: 64px;
         right: 10px;
         font-size: 120px;
         opacity: 0.2;
         z-index: -1;
         font-weight: $ft__W__EXB;
+        height: 100px;
         &:lang(ar) {
           left: 10px;
           right: auto;

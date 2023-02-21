@@ -12,16 +12,21 @@
       font-size: 40px;
     }
     .main__text {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
     .about__us__btns {
       display: flex;
       align-items: center;
       gap: 24px;
-      .sec__button,
-      .main__button {
-        padding: 14px 16px;
-        min-width: 90px;
+      // .sec__button,
+      // .main__button {
+      //   padding: 14px 16px;
+      //   min-width: 90px;
+      // }
+    }
+    @media (min-width: 1600px) {
+      .section__title {
+        font-size: 52px;
       }
     }
   }
@@ -57,6 +62,12 @@
         transition: 1.5s ease-in-out;
         transition-timing-function: cubic-bezier(0.6, 0.1, 1.44, 1);
         display: block;
+      }
+    }
+    @media (min-width: 1600px) {
+      height: 600px;
+      div {
+        width: 600px;
       }
     }
     &:hover {

@@ -9,14 +9,14 @@
       margin-bottom: 14px;
     }
     .contact__us__text {
-      font-size: $ft__16;
-      color: $black__color;
+      // font-size: $ft__16;
+      // color: $black__color;
       text-align: center;
       max-width: 100%;
-      width: 700px;
+      width: 900px;
       margin: 0 auto 40px;
       opacity: 0.9;
-      line-height: 26px;
+      // line-height: 26px;
     }
     .contact__form {
       display: flex;
@@ -30,13 +30,14 @@
         flex-direction: column;
         gap: 20px;
         flex: 1;
-        .main__button {
-          background-color: $main__color;
-          font-size: 18px;
-          &:focus,
-          &:hover {
-            background-color: $gold__color;
-          }
+        .sec__button {
+          // background-color: $main__color;
+          // font-size: 18px;
+          // &:focus,
+          // &:hover {
+          //   // background-color: $gold__color;
+          // }
+          z-index: 1;
           &.loading {
             pointer-events: none;
             cursor: not-allowed;
@@ -105,6 +106,9 @@
           border-radius: 10px;
           border: 2px solid $main__color !important;
           width: auto;
+          &:focus {
+            border-color: $gold__color !important;
+          }
         }
       }
     }

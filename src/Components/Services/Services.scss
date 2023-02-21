@@ -48,6 +48,9 @@
         overflow: hidden;
         border-radius: 4px;
         text-transform: capitalize;
+        @media (min-width: 1600px) {
+          font-size: $ft__22;
+        }
         span {
           position: absolute;
           top: 3px;
@@ -64,10 +67,6 @@
           left: -40px;
           width: 80px;
           height: 80px;
-          // &:lang(ar) {
-          //   left: auto !important;
-          //   right: -40px !important;
-          // }
           background-color: $main__color;
           border-radius: 50%;
           z-index: -1;

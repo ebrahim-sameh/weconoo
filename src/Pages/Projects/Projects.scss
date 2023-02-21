@@ -26,7 +26,11 @@
         opacity: 0.7;
         transition: 0.6s ease-in-out;
         &:not(:last-child) {
-          border-right: 1px solid $color__white;
+          border-right: 2px solid $color__white;
+          &:lang(ar) {
+            border-right: 0px solid $color__white;
+            border-left: 2px solid $color__white;
+          }
         }
         &.active {
           background-color: $main__color;
@@ -40,7 +44,7 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
   .main__button {
     width: fit-content;

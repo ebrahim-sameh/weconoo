@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { FaImages } from "react-icons/fa";
@@ -8,10 +8,12 @@ import "./ProjectBox.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useTranslation } from "react-i18next";
 
-const ProjectBox = ({ name, collection, imgs }) => {
+const ProjectBox = ({ name, collection_id, imgs, desc }) => {
   const [openSlider, setOprnSlider] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -40,7 +42,7 @@ const ProjectBox = ({ name, collection, imgs }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <span className="collection">{collection}</span>
+        <span className="collection">{t(`collections.${collection_id}`)}</span>
         <span className="project__name">{name}</span>
         <button onClick={() => setOprnSlider(true)} className="slider__button">
           <FaImages />
@@ -51,6 +53,7 @@ const ProjectBox = ({ name, collection, imgs }) => {
           images={imgs}
           startIndex={currentIndex}
           onClose={() => setOprnSlider(false)}
+          desc={desc}
         />
       )}
     </>

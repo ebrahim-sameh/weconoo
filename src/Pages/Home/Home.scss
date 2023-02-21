@@ -10,7 +10,8 @@
   .sec__button {
     width: fit-content;
     margin: 35px auto 0;
-    cursor: pointer;
-    width: 140px;
+    z-index: 1;
+    // cursor: pointer;
+    // width: 140px;
   }
 }

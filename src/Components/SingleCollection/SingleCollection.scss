@@ -38,6 +38,9 @@
     transition: 1s ease-in-out;
     white-space: pre;
     border-radius: 4px;
+    @media (min-width: 1600px) {
+      font-size: 28px;
+    }
   }
   &:hover {
     flex: 1.5;

@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 80px 0;
+  padding: 40px 0;
   border-top: 4px solid $gold__color;
   // min-height: 70vh;
   margin-top: 100px;
@@ -29,49 +29,9 @@
       color: $color__white;
       gap: 40px;
       .left,
-      .center,
+      // .center,
       .rigth {
         flex: 1;
-      }
-      .center {
-        flex: 1.4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 24px;
-        img {
-          width: 100%;
-          max-width: 500px;
-        }
-        ul {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 28px;
-          gap: 28px;
-          li {
-            a {
-              color: $gold__color;
-              background-color: transparent;
-              background-color: #0000002c;
-              backdrop-filter: blur(10px);
-              width: 50px;
-              height: 50px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 50%;
-              border: 2px solid $gold__color;
-              transition: 0.3s ease-in-out;
-              &:hover {
-                color: $black__color;
-                background-color: $gold__color;
-                border-color: $black__color;
-              }
-            }
-          }
-        }
       }
       .left,
       .rigth {
@@ -98,6 +58,13 @@
             width: 10px;
             height: 4px;
             background-color: $color__white;
+          }
+          &:lang(ar) {
+            margin: 0 24px 12px 0px;
+            &::after {
+              left: auto;
+              right: -28px;
+            }
           }
         }
       }
@@ -127,8 +94,44 @@
           }
         }
       }
-      .left {
-        flex: 0.6;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 10px;
+      img {
+        width: 100%;
+        max-width: 320px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 22px;
+        gap: 28px;
+        li {
+          a {
+            color: $gold__color;
+            background-color: transparent;
+            background-color: #0000002c;
+            backdrop-filter: blur(10px);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid $gold__color;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              color: $black__color;
+              background-color: $gold__color;
+              border-color: $black__color;
+            }
+          }
+        }
       }
     }
   }

@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 import "./FullScreenSlider.scss";
 
-const FullScreenSlider = ({ onClose, images, startIndex }) => {
+const FullScreenSlider = ({ onClose, images, startIndex, desc }) => {
   const [imagesSlider, setImagesSlider] = useState([]);
 
   useEffect(() => {
@@ -29,12 +29,7 @@ const FullScreenSlider = ({ onClose, images, startIndex }) => {
         <MdClose />
       </button>
       <div className="slider__content">
-        <div className="project__desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-          voluptates maiores perspiciatis nihil debitis labore, aliquid ullam
-          omnis iusto, dolores necessitatibus eum nam eos error amet accusamus
-          possimus quam voluptatem!
-        </div>
+        <div className="project__desc">{desc}</div>
         <ImageGallery
           items={imagesSlider}
           infinite={true}

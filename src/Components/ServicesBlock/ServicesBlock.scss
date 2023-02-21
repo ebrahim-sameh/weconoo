@@ -20,6 +20,12 @@
       background-color: $main__color;
       transition: 0.3s ease-in-out;
     }
+    &:lang(ar) {
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
   }
   .service__media {
     border-radius: 4px;
@@ -53,7 +59,7 @@
     border-radius: 4px;
   }
   .service__desc {
-    line-height: 30px;
+    // line-height: 30px;
     &.wrap {
       overflow: hidden;
       display: -webkit-box;

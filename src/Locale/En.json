@@ -75,10 +75,13 @@
   "contact__desc__1": "By filling out our contact form, you'll be providing us with valuable information that will help us better understand your needs and how we can serve you. We appreciate your interest in our company and look forward to the opportunity to connect with you.",
   "contact__desc__2": "Stay connected with us via WhatsApp! Simply click the WhatsApp button and send us a message to start the conversation. Our team is dedicated to providing exceptional customer service and responding to all inquiries as quickly as possible. We can't wait to hear from you!",
   "whats__title": "Use Whatsapp",
-  "Your_Name": "Your Name",
-  "Your_Email": "Your Email",
-  "Your_Number": "Your Number",
-  "Your_Message": "Your Message",
+  "Your_Name": "Your Name*",
+  "Your_Email": "Your Email*",
+  "Your_Number": "Your Number*",
+  "Your_Message": "Your Message*",
   "Send": "Send",
-  "Whatsapp_Us": "Whatsapp Us"
+  "Whatsapp_Us": "Whatsapp Us",
+  "All": "All",
+  "Phones": "Phones",
+  "Location": "Location"
 }

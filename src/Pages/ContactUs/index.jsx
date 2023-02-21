@@ -53,7 +53,9 @@ const ContactUs = () => {
       <div className="container">
         <div className="contact__us__content">
           <h2 className="section__title">{t("Contact_Us")}</h2>
-          <p className="contact__us__text">{t("contact__desc__1")}</p>
+          <p className="contact__us__text main__text">
+            {t("contact__desc__1")}
+          </p>
           <div className="contact__form">
             <form onSubmit={submitFormHandler} ref={form}>
               <div>
@@ -107,7 +109,7 @@ const ContactUs = () => {
               />
               <button
                 type="submit"
-                className={`main__button ${Loading ? "loading" : ""}`}
+                className={`sec__button ${Loading ? "loading" : ""}`}
               >
                 {Loading ? <span className="spinner"></span> : `${t("Send")}`}
               </button>
@@ -115,7 +117,9 @@ const ContactUs = () => {
           </div>
           <div>
             <h2 className="section__title">{t("whats__title")}</h2>
-            <p className="contact__us__text">{t("contact__desc__2")}</p>
+            <p className="contact__us__text main__text">
+              {t("contact__desc__2")}
+            </p>
             <a href="#" target="_blank" className="whatsapp">
               {t("Whatsapp_Us")}
               <BsWhatsapp />
