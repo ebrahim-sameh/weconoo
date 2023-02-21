@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/new-wecan/static/css/main.65164bcb.css",
-    "main.js": "/new-wecan/static/js/main.dee092b2.js",
+    "main.css": "/new-wecan/static/css/main.dd1786d3.css",
+    "main.js": "/new-wecan/static/js/main.d95eb33d.js",
     "static/media/service2.jpg": "/new-wecan/static/media/service2.6569b23f9656a8345c46.jpg",
     "static/media/service8.jpg": "/new-wecan/static/media/service8.bf76edc739725fa4786a.jpg",
     "static/media/service7.jpg": "/new-wecan/static/media/service7.17250d063583250bb5df.jpg",
@@ -33,11 +33,11 @@
     "static/media/icon_logo.png": "/new-wecan/static/media/icon_logo.d75abe477d53274cffa2.png",
     "static/media/aoox font.ttf": "/new-wecan/static/media/aoox font.bf642a7923c6b4030e03.ttf",
     "index.html": "/new-wecan/index.html",
-    "main.65164bcb.css.map": "/new-wecan/static/css/main.65164bcb.css.map",
-    "main.dee092b2.js.map": "/new-wecan/static/js/main.dee092b2.js.map"
+    "main.dd1786d3.css.map": "/new-wecan/static/css/main.dd1786d3.css.map",
+    "main.d95eb33d.js.map": "/new-wecan/static/js/main.d95eb33d.js.map"
   },
   "entrypoints": [
-    "static/css/main.65164bcb.css",
-    "static/js/main.dee092b2.js"
+    "static/css/main.dd1786d3.css",
+    "static/js/main.d95eb33d.js"
   ]
 }
