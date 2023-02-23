@@ -42,14 +42,6 @@ const App = () => {
             />
           }
         />
-        {/* <Route
-          path="/new-wecan"
-          element={
-            <Home
-              projects={projects?.length > 6 ? projects.slice(0, 7) : projects}
-            />
-          }
-        /> */}
         <Route path="/about-us" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/services" element={<ServicesPage />} />
