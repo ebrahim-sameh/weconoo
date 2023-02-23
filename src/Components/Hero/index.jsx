@@ -47,10 +47,10 @@ const Hero = () => {
         }}
         dir={"ltr"}
         speed={1200}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         navigation={true}
         effect={"creative"}
         creativeEffect={{
