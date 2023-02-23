@@ -26,10 +26,10 @@ const ContactUs = () => {
     setLoading(true);
     emailjs
       .sendForm(
-        "service_gz88dwl",
-        "template_0z8cdtd",
+        "service_q64rvxs",
+        "template_1qcpa58",
         form.current,
-        "nU4oy23aRmqubMFMX"
+        "1y6TK9Q-ZV8ofdz9G"
       )
       .then(
         () => {

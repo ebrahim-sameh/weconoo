@@ -6,7 +6,11 @@ import DropdownMenu from "../DropdownMenu";
 import { useTranslation } from "react-i18next";
 import AppContext from "../../store/app-context";
 import Logo from "../assets/Logo.png";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import {
+  AiOutlineWhatsApp,
+  AiOutlineMenu,
+  AiOutlineClose,
+} from "react-icons/ai";
 
 import "./Header.scss";
 
@@ -15,6 +19,7 @@ const Header = ({ className }) => {
   const { t } = useTranslation();
   const [showHeader, setShowHeader] = useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [openMenu, setOpenMenu] = useState(false);
   const location = useLocation();
   const links = [
     {
@@ -99,13 +104,17 @@ const Header = ({ className }) => {
         <NavLink to="/new-wecan" className="logo">
           <img src={Logo} alt="" />
         </NavLink>
-        <div className="nav__list">
+        <div className={`nav__list ${openMenu ? "opened" : ""}`}>
+          <button className="close__button" onClick={() => setOpenMenu(false)}>
+            <AiOutlineClose />
+          </button>
           <ul className="links__list">
             {links.map((link, i) => {
               if (link.link) {
                 return (
                   <li key={i}>
                     <NavLink
+                      onClick={() => setOpenMenu(false)}
                       to={link.route}
                       className={`main__link ${({ isActive }) =>
                         isActive ? "active" : ""}`}
@@ -123,14 +132,32 @@ const Header = ({ className }) => {
               }
             })}
           </ul>
-          <a className="whats__app" target="_blank" href="#">
-            {/* {t("Whatssapp")} */}
+          <a
+            className="whats__app"
+            target="_blank"
+            href="#"
+            onClick={() => setOpenMenu(false)}
+          >
             <AiOutlineWhatsApp />
           </a>
-          <button className="language__btn" onClick={() => ctx.toggleLang()}>
+          <button
+            className="language__btn"
+            onClick={() => {
+              setOpenMenu(false);
+              ctx.toggleLang();
+            }}
+          >
             {ctx.lang === "ar" ? "En" : "Ar"}
           </button>
         </div>
+        <button
+          className="toogle__meun"
+          onClick={() => {
+            setOpenMenu(true);
+          }}
+        >
+          <AiOutlineMenu />
+        </button>
       </nav>
     </div>
   );

@@ -17,6 +17,11 @@ const ServicesPage = () => {
     }
   }, [selectedService]);
 
+  const breakpoints = {
+    default: 2,
+    991: 1,
+  };
+
   const services = [
     {
       img: "https://wecan200.s3.amazonaws.com/website/Website+Edits/semo522_huge_machine_in_a_lab_furture_time_wood_manufacutre_dig_072222fd-9267-4770-a16a-2e2e357318a7.png",
@@ -81,8 +86,7 @@ const ServicesPage = () => {
         <div className="container">
           <h2 className="section__title">{t("Our_Services")}</h2>
           <Masonry
-            // className="sevices__list"
-            breakpointCols={2}
+            breakpointCols={breakpoints}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >

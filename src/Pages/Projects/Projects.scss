@@ -1,7 +1,6 @@
 @import "../../Styles/Variables.scss";
 
 .our__works__page {
-  // min-height: 100vh;
   overflow: hidden;
   padding-top: 150px !important;
   .our__works__header {
@@ -51,5 +50,12 @@
     margin: 35px auto 0;
     cursor: pointer;
     width: 140px;
+  }
+}
+@media (max-width: 991px) {
+  .our__works__page {
+    .our__works__header {
+      flex-direction: column;
+    }
   }
 }

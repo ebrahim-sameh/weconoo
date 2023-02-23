@@ -166,6 +166,9 @@ button {
 /* Style your items */
 .my-masonry-grid_column > div {
   margin-bottom: 30px;
+  @media (max-width: 991px) {
+    margin-bottom: 52px;
+  }
 }
 
 .Loading {
@@ -188,5 +191,11 @@ button {
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 1199px) {
+  .section__title {
+    font-size: 32px;
+    line-height: 1.7;
   }
 }

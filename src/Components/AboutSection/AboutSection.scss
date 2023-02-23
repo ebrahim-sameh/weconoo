@@ -53,8 +53,6 @@
     }
     .about__text {
       color: $color__white;
-      // font-size: $ft__18;
-      // line-height: 32px;
       padding: 12px 14px;
       backdrop-filter: brightness(0.5) blur(4px);
       position: relative;
@@ -72,6 +70,13 @@
           right: auto;
         }
       }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .about__page__section {
+    .about__section__content {
+      flex-direction: column-reverse !important;
     }
   }
 }

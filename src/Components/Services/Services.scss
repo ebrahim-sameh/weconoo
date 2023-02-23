@@ -4,10 +4,8 @@
   background-image: url("../../../public/assets/servicebg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
   background-position: center;
   position: relative;
-  // min-height: 100vh;
   &::after {
     content: "";
     position: absolute;
@@ -92,6 +90,10 @@
             left: 0;
           }
         }
+      }
+      @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
       }
     }
     .sec__button {

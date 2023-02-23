@@ -34,6 +34,9 @@
     overflow: hidden;
     transition: 0.6s ease-in-out;
     position: relative;
+    @media (max-width: 991px) {
+      height: 400px;
+    }
     &::after {
       content: "";
       position: absolute;

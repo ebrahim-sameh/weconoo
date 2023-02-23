@@ -4,10 +4,15 @@
   .section__title {
     text-align: center;
   }
-  .sevices__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
-    margin-bottom: 60px;
-  }
+  // .sevices__list {
+  //   display: flex !important;
+  //   flex-direction: column !important;
+  //   gap: 24px;
+  //   .my-masonry-grid_column {
+  //     padding: 0;
+  //     > div {
+  //       margin-bottom: 0px;
+  //     }
+  //   }
+  // }
 }

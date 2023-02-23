@@ -157,6 +157,23 @@
           }
         }
       }
+      @media (max-width: 991px) {
+        .hero__wecan__icon {
+          img {
+            width: 180px;
+          }
+        }
+        .wecan__text {
+          .wecan__title {
+            font-size: 62px;
+          }
+          .wooden__text {
+            p {
+              font-size: 28px;
+            }
+          }
+        }
+      }
     }
     .Heading {
       font-family: myFirstFont;
@@ -187,6 +204,9 @@
         @media (min-width: 1600px) {
           font-size: 60px;
         }
+        @media (max-width: 991px) {
+          font-size: 32px;
+        }
         &.active {
           transition-delay: 2s;
           opacity: 1;
@@ -194,6 +214,9 @@
           transform: translate(-50%, calc(-50% + 100px));
           @media (min-width: 1600px) {
             transform: translate(-50%, calc(-50% + 170px));
+          }
+          @media (max-width: 991px) {
+            transform: translate(-50%, calc(-50% + 77px));
           }
         }
       }
@@ -208,6 +231,10 @@
         background-color: $main__color;
         @media (min-width: 1600px) {
           font-size: 30px;
+        }
+        @media (max-width: 991px) {
+          font-size: 18px;
+          padding: 10px 12px;
         }
         &:lang(ar) {
           left: auto;
@@ -236,6 +263,13 @@
           font-size: 44px;
           max-width: 1200px;
           line-height: 62px;
+        }
+        @media (max-width: 991px) {
+          // padding: 10px;
+          font-size: 24px;
+          transition: none;
+          max-width: 90%;
+          line-height: 1.7;
         }
         &::first-letter {
           color: $gold__color;
@@ -286,6 +320,9 @@
         @media (min-width: 1600px) {
           transform: translateY(120px);
         }
+        @media (max-width: 991px) {
+          transform: translateY(87px);
+        }
       }
       ul {
         display: flex;
@@ -309,21 +346,16 @@
             background-color: $main__color;
           }
         }
+        @media (max-width: 991px) {
+          font-size: 18px;
+          li {
+            a {
+              width: 38px;
+              height: 38px;
+            }
+          }
+        }
       }
     }
   }
 }
-// @keyframes poup {
-//   to {
-//     opacity: 1;
-//     top: 50%;
-//     left: 50%;
-//   }
-// }
-// @keyframes poup2 {
-//   to {
-//     opacity: 1;
-//     top: 50%;
-//     left: 0%;
-//   }
-// }
