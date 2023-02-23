@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ButtonScrollTop, Footer, Header } from "./Components";
 import { Home, About, Projects, ServicesPage, ContactUs } from "./Pages";
 import { collection, getDocs } from "firebase/firestore";
@@ -34,15 +34,22 @@ const App = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="new-wecan" />} />
         <Route
-          path="/new-wecan"
+          path="/"
           element={
             <Home
               projects={projects?.length > 6 ? projects.slice(0, 7) : projects}
             />
           }
         />
+        {/* <Route
+          path="/new-wecan"
+          element={
+            <Home
+              projects={projects?.length > 6 ? projects.slice(0, 7) : projects}
+            />
+          }
+        /> */}
         <Route path="/about-us" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/services" element={<ServicesPage />} />

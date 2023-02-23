@@ -23,7 +23,7 @@ const Header = ({ className }) => {
   const location = useLocation();
   const links = [
     {
-      route: "/new-wecan",
+      route: "/",
       label: `${t("Header.Home")}`,
       link: true,
     },
@@ -93,7 +93,8 @@ const Header = ({ className }) => {
     <div
       className={`main__header ${`${
         location.pathname === "/new-wecan" ||
-        location.pathname === "/new-wecan/"
+        location.pathname === "/new-wecan/" ||
+        location.pathname === "/"
           ? "home__hero"
           : ""
       }`} ${
@@ -101,7 +102,7 @@ const Header = ({ className }) => {
       }`}
     >
       <nav className="nav container">
-        <NavLink to="/new-wecan" className="logo">
+        <NavLink to="/" className="logo">
           <img src={Logo} alt="" />
         </NavLink>
         <div className={`nav__list ${openMenu ? "opened" : ""}`}>
