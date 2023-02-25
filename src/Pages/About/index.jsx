@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AboutSection from "../../Components/AboutSection";
-import AboutImage from "../../Components/assets/about1.png";
+import AboutImage from "../../Components/assets/about1.jpg";
 import MissionImage from "../../Components/assets/mission.png";
 import VisionImage from "../../Components/assets/vision.png";
 import ValueImage from "../../Components/assets/value.png";

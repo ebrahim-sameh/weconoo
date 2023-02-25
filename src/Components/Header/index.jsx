@@ -136,8 +136,9 @@ const Header = ({ className }) => {
           <a
             className="whats__app"
             target="_blank"
-            href="#"
+            href="https://api.whatsapp.com/send?phone=01013503160"
             onClick={() => setOpenMenu(false)}
+            rel="noreferrer"
           >
             <AiOutlineWhatsApp />
           </a>

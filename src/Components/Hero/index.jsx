@@ -47,10 +47,10 @@ const Hero = () => {
         }}
         dir={"ltr"}
         speed={1200}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
         navigation={true}
         effect={"creative"}
         creativeEffect={{
@@ -134,7 +134,7 @@ const Hero = () => {
                       </li>
                       <li>
                         <a
-                          href="https://www.linkedin.com/company/wecaneg/"
+                          href="https://api.whatsapp.com/send?phone=01013503160"
                           target="_blank"
                           rel="noreferrer"
                         >

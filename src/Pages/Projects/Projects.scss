@@ -59,3 +59,40 @@
     }
   }
 }
+@media (max-width: 620px) {
+  .our__works__page {
+    .our__works__header {
+      .our__works__filter {
+        white-space: pre;
+        overflow-x: scroll;
+        width: 100%;
+        /* background: red; */
+        display: -webkit-box;
+        border: 2px solid #fff;
+        // border-radius: 50px;
+        border-radius: 0;
+        direction: ltr;
+        button {
+          min-width: 80px;
+          text-align: center;
+          // border-color: #000 !important;
+          border-radius: 0 !important;
+          &:first-child {
+            border-radius: 12px 0 0 12px !important;
+          }
+          &:last-child {
+            border-radius: 0px 12px 12px 0px !important;
+          }
+          &:lang(ar) {
+            &:first-child {
+              border: none;
+            }
+            &:last-child {
+              border-left: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

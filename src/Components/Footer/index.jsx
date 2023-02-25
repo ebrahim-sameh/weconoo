@@ -89,7 +89,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/company/wecaneg/"
+                href="https://api.whatsapp.com/send?phone=01013503160"
                 target="_blank"
                 rel="noreferrer"
               >

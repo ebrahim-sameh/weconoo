@@ -25,7 +25,7 @@ const Projects = () => {
       const querySnapshot = await getDocs(collection(db, "projects"));
       const arr = [];
       querySnapshot.forEach((doc) => {
-        arr.push(doc.data());
+        arr.push(doc?.data());
       });
       setProjects(arr);
       setFilteredProjects(arr);
@@ -40,6 +40,9 @@ const Projects = () => {
       top: 0,
     });
   }, []);
+
+  console.log(projects);
+
   return (
     <>
       {/* <Header /> */}
@@ -61,8 +64,8 @@ const Projects = () => {
                 className={`${currentActive === "Home_Decor" ? "active" : ""}`}
                 onClick={() => {
                   setFilteredProjects(
-                    projects.filter(
-                      (project) => project.collection_id === "Home_Decor"
+                    projects?.filter(
+                      (project) => project?.collection_id === "Home_Decor"
                     )
                   );
                   setCurrentActive("Home_Decor");
@@ -76,8 +79,8 @@ const Projects = () => {
                 }`}
                 onClick={() => {
                   setFilteredProjects(
-                    projects.filter(
-                      (project) => project.collection_id === "Medical_Sector"
+                    projects?.filter(
+                      (project) => project?.collection_id === "Medical_Sector"
                     )
                   );
                   setCurrentActive("Medical_Sector");
@@ -89,7 +92,7 @@ const Projects = () => {
                 className={`${currentActive === "Studies" ? "active" : ""}`}
                 onClick={() => {
                   setFilteredProjects(
-                    projects.filter(
+                    projects?.filter(
                       (project) => project.collection_id === "Studies"
                     )
                   );
@@ -104,7 +107,7 @@ const Projects = () => {
                 }`}
                 onClick={() => {
                   setFilteredProjects(
-                    projects.filter(
+                    projects?.filter(
                       (project) =>
                         project.collection_id === "Commercial_Facilities"
                     )
@@ -120,18 +123,20 @@ const Projects = () => {
             <div className="Loading">
               <span></span>
             </div>
-          ) : !filteredProjects.length ? (
+          ) : !filteredProjects?.length ? (
             <p>No Projects</p>
           ) : (
             <div className="some__project__container">
-              {filteredProjects.map((project, i) => (
+              {filteredProjects?.map((project, i) => (
                 <ProjectBox
                   key={i}
-                  name={ctx.lang === "ar" ? project.ar_name : project.en_name}
-                  img={project.images[0]}
-                  imgs={project.images}
-                  collection_id={project.collection_id}
-                  desc={ctx.lang === "ar" ? project.ar_desc : project.en_desc}
+                  name={ctx.lang === "ar" ? project?.ar_name : project?.en_name}
+                  img={
+                    project?.images ? project?.images[0] : project?.immages[0]
+                  }
+                  imgs={project?.images}
+                  collection_id={project?.collection_id}
+                  desc={ctx.lang === "ar" ? project?.ar_desc : project?.en_desc}
                   index={i}
                 />
               ))}

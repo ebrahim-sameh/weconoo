@@ -31,7 +31,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route
@@ -49,7 +49,7 @@ const App = () => {
       </Routes>
       <Footer />
       <ButtonScrollTop />
-    </div>
+    </>
   );
 };
 

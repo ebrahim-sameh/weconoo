@@ -4,9 +4,12 @@ import { useTranslation } from "react-i18next";
 
 import "./AboutUs.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AppContext from "../../store/app-context";
 
 const AboutUs = () => {
   const { t } = useTranslation();
+  const lang = useContext(AppContext).lang;
 
   return (
     <section className="section__space section__padding about__section">
@@ -27,13 +30,15 @@ const AboutUs = () => {
               >
                 {t("Read_More")}
               </Link>
-              <button
+              <a
+                href={lang === "ar" ? "./ar-profile.pdf" : "./en-profile.pdf"}
+                download
                 className="main__button"
                 data-aos="fade-right"
                 data-aos-delay="300"
               >
                 {t("Download_Profile")}
-              </button>
+              </a>
             </div>
           </div>
           <div className="rigth" data-aos="fade-left">

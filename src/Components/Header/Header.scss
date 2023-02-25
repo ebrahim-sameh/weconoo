@@ -51,6 +51,9 @@
         @media (min-width: 1400px) {
           width: 220px;
         }
+        @media (max-width: 574px) {
+          width: 146px;
+        }
       }
     }
     .links__list,
@@ -153,7 +156,7 @@
   .main__header {
     .nav {
       .nav__list {
-        position: absolute;
+        position: fixed;
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -183,8 +186,8 @@
     &.header__hide {
       .nav {
         .nav__list {
+          transition: none;
           top: 80px;
-          // height: calc(100vh - 80px);
         }
       }
     }

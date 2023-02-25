@@ -197,3 +197,9 @@ button {
     line-height: 1.7;
   }
 }
+@media (max-width: 574px) {
+  .section__title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}

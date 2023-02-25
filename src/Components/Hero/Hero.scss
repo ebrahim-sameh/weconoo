@@ -50,6 +50,12 @@
         border-radius: 0;
       }
     }
+    @media (max-width: 574px) {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
   }
   .div {
     position: relative;
@@ -174,6 +180,25 @@
           }
         }
       }
+      @media (max-width: 574px) {
+        max-width: 95%;
+        .hero__wecan__icon {
+          img {
+            width: 114px;
+          }
+        }
+        .wecan__text {
+          padding-bottom: 14px;
+          .wecan__title {
+            font-size: 38px;
+          }
+          .wooden__text {
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
     }
     .Heading {
       font-family: myFirstFont;
@@ -207,6 +232,13 @@
         @media (max-width: 991px) {
           font-size: 32px;
         }
+        @media (max-width: 574px) {
+          font-size: 18px;
+          white-space: normal;
+          max-height: 95%;
+          padding: 10px 4px;
+          width: 95%;
+        }
         &.active {
           transition-delay: 2s;
           opacity: 1;
@@ -217,6 +249,9 @@
           }
           @media (max-width: 991px) {
             transform: translate(-50%, calc(-50% + 77px));
+          }
+          @media (max-width: 574px) {
+            transform: translate(-50%, calc(-50% + 38px));
           }
         }
       }
@@ -236,16 +271,36 @@
           font-size: 18px;
           padding: 10px 12px;
         }
+        @media (max-width: 767px) {
+          &:lang(en) {
+            font-size: 15px;
+          }
+        }
+        @media (max-width: 574px) {
+          font-size: 15px;
+          font-size: 14px;
+          padding: 10px;
+          width: 100%;
+          line-height: 1.6;
+          transform: translate(-100%, -50%);
+        }
         &:lang(ar) {
           left: auto;
           right: 0;
           transform: translate(100%, 80%);
+          @media (max-width: 574px) {
+            transform: translate(100%, -50%);
+          }
         }
         &.active {
           transition-delay: 0.8s;
           animation: none;
           transform: translate(0%, 80%);
           opacity: 1;
+          @media (max-width: 574px) {
+            top: 50%;
+            transform: translate(0, -50%);
+          }
         }
       }
       &.three {
@@ -265,11 +320,14 @@
           line-height: 62px;
         }
         @media (max-width: 991px) {
-          // padding: 10px;
           font-size: 24px;
-          transition: none;
           max-width: 90%;
           line-height: 1.7;
+        }
+        @media (max-width: 574px) {
+          font-size: 16px;
+          max-width: 95%;
+          padding: 10px;
         }
         &::first-letter {
           color: $gold__color;
@@ -322,6 +380,11 @@
         }
         @media (max-width: 991px) {
           transform: translateY(87px);
+        }
+        @media (max-width: 574px) {
+          left: 0;
+          width: 100%;
+          padding: 0 10px;
         }
       }
       ul {
