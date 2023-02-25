@@ -32,18 +32,17 @@ const Home = ({ projects }) => {
         <div className="container">
           <h2 className="section__title">{t("Some_Works")}</h2>
           <div className="some__project__container">
-            {projects?.images?.length &&
-              projects?.map((project, i) => (
-                <ProjectBox
-                  key={i}
-                  name={ctx.lang === "ar" ? project?.ar_name : project?.en_name}
-                  img={project?.images ? project?.images[0] : ""}
-                  imgs={project?.images || []}
-                  collection_id={project?.collection_id}
-                  desc={ctx.lang === "ar" ? project?.ar_desc : project?.en_desc}
-                  index={i}
-                />
-              ))}
+            {projects?.map((project, i) => (
+              <ProjectBox
+                key={i}
+                name={ctx.lang === "ar" ? project?.ar_name : project?.en_name}
+                img={project?.images ? project?.images[0] : ""}
+                imgs={project?.images || []}
+                collection_id={project?.collection_id}
+                desc={ctx.lang === "ar" ? project?.ar_desc : project?.en_desc}
+                index={i}
+              />
+            ))}
           </div>
         </div>
         <Link to="/projects" className="sec__button">
